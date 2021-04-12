@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Toolbar, IconButton, Typography, Button, Link } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography, Link, FormGroup, FormControlLabel, Switch } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        fontFamily: "Kiwi Maru",
     },
     appbar: {
         background: 'none',
@@ -17,11 +18,27 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         flexGrow: 1,
+        '& > * + *': {
+            marginLeft: theme.spacing(1),
+        },
     },
 }));
 
 export default function NavBar() {
     const classes = useStyles();
+
+    const [state, setState] = React.useState({
+        checkedA: true,
+        checkedB: true,
+    });
+
+    const [auth, setAuth] = React.useState(true);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    
+    const handleChange = (e) => {
+        setAuth(e.target.checked);
+    };
 
     return (
         <div className={classes.root}>
@@ -34,14 +51,25 @@ export default function NavBar() {
                         <Link href="/" onClick={(e) => {
                                 e.preventDefault();
                                 window.location.href = '/';
-                            }}>Home 
+                            }}>Home
                         </Link>
                         <Link href="/projects" onClick={(e) => {
                                 e.preventDefault();
                                 window.location.href = '/projects';
-                            }}> Projects
+                            }}>{'Projects'}
+                        </Link>
+                        <Link href="/contact" onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = '/contact';
+                            }}>{'Contact'}
                         </Link>
                     </Typography>
+                    <FormGroup row>
+                        <FormControlLabel
+                        control={<Switch checked={auth} onChange={handleChange} name="light switch"/>}
+                        label={auth ? 'Lights On' : 'Lights Out'}
+                        />
+                    </FormGroup>
                 </Toolbar>
             </AppBar>
         </div>

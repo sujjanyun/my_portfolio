@@ -8,6 +8,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import { IconButton, Tooltip } from '@material-ui/core';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: "block",
@@ -19,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '50px',
         paddingRight: '50px',
         paddingBottom: '50px',
+        backgroundColor: 'yellow',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundAttachment: 'flex',
+        backgroundPosition: 'center',
+        backgroundImage: `url('https://media.sanctuarymentalhealth.org/wp-content/uploads/2021/03/04151535/The-Starry-Night.jpg')`,
     },
     media: {
         textAlign: "center",
@@ -29,19 +36,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        border: '10px #556B2F solid',
+        border: '10px #fff solid',
     },
-    about: {
-        backgroundColor: 'rgba(247, 202, 24, .5)',
-        paddingLeft: '30px',
-        paddingRight: '30px',
-        paddingTop: '10px',
-        paddingBottom: '10px',
-        marginTop: '30px',
-    }
 }));
 
-export default function LandingPage() {
+export default function DarkLandingPage() {
     const classes = useStyles();
 
     return (
@@ -50,13 +49,11 @@ export default function LandingPage() {
                 <CardMedia className={classes.media}>
                     <img src={ myImage } className={classes.img} alt='this is me!'/>
                 </CardMedia>
-            <div className={classes.about}>
-            <p>Hello && 안녕하세요!</p>
+            <p className={classes.about}>Hello && 안녕하세요.</p>
             <p>My name is Susan Yun and I am an aspiring Full-Stack Software Developer.</p>
-            <p>Before taking the plunge into the wonderful world of the world wide web, I graduated from the University of Texas at Austin with a Bachelor of Science degree in Nutrition and Public Health. I know, I know. What does a social-science degree in the realm of health have to do with coding? Well my friend, as the web is connected, so is the world, and innovation happens at the intersections!</p>
-            <p>I am an endless explorer and curious curator. I desire to bring a different perspective, utilizing my unique background, to build user-friendly applications and eye-catching, beautiful designs, to people, for people. I also love stories and love to tell stories. Our individual stories connects us all to our shared humanity. Through my code, I hope to share my story. Let me help you, share your story and bring your webpage to life.</p>
-            <p>In my free time, I love to read, dream, find memes, come up with revolutionary schemes, and write boolean strings!</p>
-            </div>
+            <p>Before taking the plunge into the wonderful world of the world wide web, I graduated from the University of Texas at Austin with a Bachelor of Science degree in Nutrition and Public Health. I know, I know. What does a social-science degree in the realm of health have to do with coding? Well my friend, as the web is connected, so is the world and innovation happens at the intersections.</p>
+            <p>I am an explorer and curious.  I envision using to bring a different perspective, a human-friendly perspective to build user-friendly applications and eye-catching, unique designs, to people, for people. I love stories. I love to create stories. I love to share stories. The power of stories connect all of us. Let me help you, share your story and bring your webpage to life!</p>
+            <p>In my free time, I love to read, write, dream, memes, boolean strings, revolutionary schemes.</p>
             <h2>Contact Me!</h2>
             <Tooltip title="E-Mail">
                 <IconButton color="primary" button key="Email" component="a" href="mailto:susanhkyun@gmail.com">
@@ -64,8 +61,11 @@ export default function LandingPage() {
                 </IconButton>
             </Tooltip>
             <Tooltip title="Resume">
-                <IconButton color="primary" button key="Download" component="a" href="../assets/ATVProgrammerResume.pdf" download = "ATVProgrammerResume.pdf">
-                    <PictureAsPdfIcon/>
+                <IconButton color="primary">
+                    <PictureAsPdfIcon onClick={(e) => {
+                e.preventDefault();
+                window.location.href = 'https://github.com/kgarcia14/puppyluv_frontend';
+                }}/>
                 </IconButton>
             </Tooltip>
             <Tooltip title="GitHub">
