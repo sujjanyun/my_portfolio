@@ -8,7 +8,7 @@ import myImage2 from '../assets/image02.jpg'
 import myImage3 from '../assets/image03.jpg'
 import myImage4 from '../assets/image04.jpg'
 import CardActionArea from '@material-ui/core/CardActionArea';
-import { IconButton, Tooltip } from '@material-ui/core';
+import { Tooltip } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
 
 
@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Projects() {
     const classes = useStyles();
-    const preventDefault = (event) => event.preventDefault();
 
     return (
         <div className={classes.root}>

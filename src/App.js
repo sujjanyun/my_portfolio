@@ -7,7 +7,6 @@ import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: "Kiwi Maru",

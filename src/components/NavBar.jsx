@@ -26,15 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar() {
     const classes = useStyles();
-
-    const [state, setState] = React.useState({
-        checkedA: true,
-        checkedB: true,
-    });
-
     const [auth, setAuth] = React.useState(true);
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
     
     const handleChange = (e) => {
         setAuth(e.target.checked);
