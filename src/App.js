@@ -26,7 +26,6 @@ export default function App() {
   <div className={classes.root}>
   <Router>
     <NavBar/>
-    <Switch>
       <Route exact path="/">
         <LandingPage/>
       </Route>
@@ -36,7 +35,6 @@ export default function App() {
       <Route exact path="/contact">
         <Contact/>
       </Route>
-    </Switch>
   </Router>
   </div>
   );
