@@ -72,8 +72,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar() {
     const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
     const handleMobileMenuOpen = (event) => {

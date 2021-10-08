@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import { CardMedia, Box, Grid } from '@material-ui/core';
 import aboutMe from '../assets/aboutme.png';
@@ -116,10 +116,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function About() {
     const classes = useStyles();
-    const [checked, setChecked] = useState(false);
-    useEffect(() => {
-        setChecked(true);
-    }, []);
     const biocheck = useWindowPosition("bio");
     const skillscheck = useWindowPosition("skills");
 
