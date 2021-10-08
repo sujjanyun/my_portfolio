@@ -1,40 +1,44 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core';
 
 import LandingPage from "./components/LandingPage";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    fontFamily: "Kiwi Maru",
-    backgroundColor: 'yellow',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundAttachment: 'flex',
-    backgroundPosition: 'center',
-    backgroundImage: `url('https://micrio.vangoghmuseum.nl/iiif/TZCqF/full/1280,/0/default.jpg?hash=_FqO0rAhuNsZ7ObVCZ6wgqpv_25KhGr4PStqoLnHnhU')`,
-  },
-}))
+import ProjectsPage from "./components/ProjectsPage";
+import About from "./components/About";
+import Yuansfer from "./components/Yuansfer";
+import Footer from "./components/Footer";
+import FooterWhite from "./components/FooterWhite";
+import PuppyLuv from "./components/PuppyLuv";
 
 export default function App() {
-  const classes = useStyles();
-
   return (
-  <div className={classes.root}>
+  <div>
   <Router>
+    <CssBaseline />
     <NavBar/>
     <Switch>
       <Route exact path="/">
         <LandingPage/>
+        <Projects/>
+        <Footer/>
+      </Route>
+      <Route exact path="/about">
+        <About/>
+        <Footer/>
+      </Route>
+      <Route exact path="/yuansfer">
+        <Yuansfer/>
+        <FooterWhite/>
+      </Route>
+      <Route exact path="/puppyluv">
+        <PuppyLuv/>
+        <FooterWhite/>
       </Route>
       <Route exact path="/projects">
-        <Projects/>
-      </Route>
-      <Route exact path="/contact">
-        <Contact/>
+        <ProjectsPage/>
+        <Footer/>
       </Route>
     </Switch>
   </Router>
