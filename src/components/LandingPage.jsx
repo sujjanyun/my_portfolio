@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '60px',
         width: '70%',
         maxWidth: '600vh',
-        [theme.breakpoints.between('xs', 'sm')]: {
+        [theme.breakpoints.down('xs')]: {
             paddingTop: '90px',
             width: '100%',
             paddingLeft: '20px',
@@ -43,9 +43,12 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '36px',
         },
         [theme.breakpoints.between('sm', 'md')]: {
-            fontSize: '66px',
+            fontSize: '56px',
         },
-        [theme.breakpoints.between('md', 'lg')]: {
+        [theme.breakpoints.between('md', 'xl')]: {
+            fontSize: '64px',
+        },
+        [theme.breakpoints.up('xl')]: {
             fontSize: '80px',
         },
     },
@@ -67,13 +70,13 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.between('sm', 'md')]: {
             width: '100%',
+            fontSize: '20px',
+        },
+        [theme.breakpoints.between('md', 'xl')]: {
+            width: '100%',
             fontSize: '22px',
         },
-        [theme.breakpoints.between('md', 'lg')]: {
-            width: '100%',
-            fontSize: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
+        [theme.breakpoints.up('xl')]: {
             width: '100%',
             fontSize: '34px',
         },
@@ -89,27 +92,27 @@ const useStyles = makeStyles((theme) => ({
             fontSize: "2.5rem",
         },
         [theme.breakpoints.between('sm', 'md')]: {
+            fontSize: "3rem",
+        },
+        [theme.breakpoints.between('md', 'xl')]: {
             fontSize: "4rem",
         },
-        [theme.breakpoints.between('md', 'lg')]: {
-            fontSize: "6rem",
-        },
-        [theme.breakpoints.up('lg')]: {
+        [theme.breakpoints.up('xl')]: {
             fontSize: "6rem",
         },
     },
     aboutMeType: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.between('xs', 'sm')]: {
             display: 'none',
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.between('sm', 'md')]: {
+            fontSize: '20px',
+        },
+        [theme.breakpoints.between('md', 'xl')]: {
+            width: '100%',
             fontSize: '22px',
         },
-        [theme.breakpoints.up('md')]: {
-            width: '100%',
-            fontSize: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
+        [theme.breakpoints.up('xl')]: {
             width: '100%',
             fontSize: '34px',
         },

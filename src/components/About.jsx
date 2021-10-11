@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: '#1C2A4E',
         backgroundColor: '#FCF6F1',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '13px',
+        },
     },
     img: {
         display: 'flex',
@@ -60,34 +63,46 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '30px',
         paddingTop: '30px',
         fontSize: "16px",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+            paddingLeft: '20px',
+            paddingRight: '20px',
+            paddingTop: '10px',
+            paddingBottom: '10px',
+        },
     },
     values: {
         color: '#1C2A4E',
         backgroundColor: 'white',
         overflow: 'hidden',
         fontSize: "16px",
-        paddingBottom: '20px',
     },
     valuetext: {
         maxWidth: '1000px',
         paddingLeft: '50px',
         paddingRight: '50px',
+        paddingBottom: '20px',
         textAlign: 'left',
         marginLeft: 'auto',
         marginRight: 'auto',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+            paddingLeft: '20px',
+            paddingRight: '20px',
+            paddingTop: '10px',
+            paddingBottom: '10px',
+        },
     },
     connect: {
         color: '#1C2A4E',
         overflow: 'hidden',
         textAlign: 'center',
-        paddingBottom: '20px'
     },
     skills: {
         color: '#1C2A4E',
         overflow: 'hidden',
         backgroundColor: '#FCF6F1',
         fontSize: "16px",
-        paddingBottom: '30px',
     },
     skillstext: {
         maxWidth: '1000px',
@@ -96,6 +111,13 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         marginLeft: 'auto',
         marginRight: 'auto',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+            paddingLeft: '20px',
+            paddingRight: '20px',
+            paddingTop: '10px',
+            paddingBottom: '10px',
+        },
     },
     skillsbox: {
         marginLeft: 'auto',
@@ -111,6 +133,12 @@ const useStyles = makeStyles((theme) => ({
         minHeight: '100px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        [theme.breakpoints.down('xs')]: {
+            maxWidth: '55px',
+            minWidth: '55px',
+            maxHeight: '55px',
+            minHeight: '55px',
+        },
     }
 }));
 
