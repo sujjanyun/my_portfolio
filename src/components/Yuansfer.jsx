@@ -278,9 +278,9 @@ export default function Yuansfer() {
             <Fade in={impcheck} {...(impcheck ? { timeout: 1500 } : {})}>
                 <div className={classes.impactText} id="imp">
                 <h1 className={classes.backgroundTextHeader}>Impact</h1>
-                <h3>12% Decrease Misdirected Payments</h3>
+                <h3>10% Decrease Misdirected Payments</h3>
                 <p>Since the implementation of the new rebuild of the Yuansfer payout component, we have seen a significant decrease in the number of mistaken payment transactions. This has saved Yuansfer both time and money and has allowed for the company to direct its energy into continuously expanding and improving its services. We have also reported an increase in both employee and customer satisfaction. Both on the user and company perspective, we no longer need to deal with these time-consuming and frustrating mistakes.</p>
-                <h3>7% Increase in Tip Revenue</h3>
+                <h3>6% Increase in Tip Revenue</h3>
                 <p>According to our surveys, the addition of real-time feedback has proven to be a hit amongst users. We have not only seen an increase in tips, but we have reported an increase in customer satisfaction. Users reported that they feel more connected with the business, therefore more convicted to give.</p>
                 </div>
             </Fade>
