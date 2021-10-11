@@ -9,16 +9,30 @@ const useStyles = makeStyles((theme) => ({
         display: "block",
         position: 'relative',
         fontFamily: "Urbanist",
-        fontSize: '20px',
         textAlign: "center",
         flexGrow: 1,
-        paddingBottom: '60px',
-        paddingTop: '20px',
+        paddingTop: '70px',
+        paddingBottom: '20px',
         backgroundColor: '#FCF6F1',
         marginLeft: 'auto',
         marginRight: 'auto',
         color: '#1C2A4E',
-        minHeight: '90vh'
+        minHeight: '90vh',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '16px',
+        },
+        [theme.breakpoints.between('xs', 'sm')]: {
+            fontSize: '18px',
+        },
+        [theme.breakpoints.between('sm', 'lg')]: {
+            fontSize: '20px',
+        },
+        [theme.breakpoints.between('lg', 'xl')]: {
+            fontSize: '22px',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '26px',
+        },
     },
     box: {
         width: '84%',
@@ -28,6 +42,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+            paddingLeft: '20px',
+            paddingRight: '20px',
+        },
     },
     sectionDesktop: {
         display: 'none',

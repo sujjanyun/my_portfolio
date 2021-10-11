@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
         display: "block",
         position: 'relative',
         fontFamily: "Urbanist",
-        fontSize: '20px',
         textAlign: "center",
         flexGrow: 1,
         backgroundColor: '#FCF6F1',
@@ -22,6 +21,18 @@ const useStyles = makeStyles((theme) => ({
         minHeight: '80vh',
         [theme.breakpoints.down('xs')]: {
             fontSize: '16px',
+        },
+        [theme.breakpoints.between('xs', 'md')]: {
+            fontSize: '18px',
+        },
+        [theme.breakpoints.between('md', 'lg')]: {
+            fontSize: '20px',
+        },
+        [theme.breakpoints.between('lg', 'xl')]: {
+            fontSize: '22px',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '24px',
         },
     },
     box: {

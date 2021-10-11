@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '80px',
         backgroundColor: '#FFDAE0',
         fontSize: "16px",
+        [theme.breakpoints.down('xs')]: {
+            paddingLeft: '20px',
+            paddingRight: '20px',
+        },
     },
     info: {
         marginLeft: 'auto',
@@ -40,6 +44,11 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         backgroundColor: '#FFF3F5',
         maxWidth: '800px',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '10px',
+            paddingLeft: '5px',
+            paddingRight: '5px',
+        },
     },
     background: {
         backgroundColor: 'white',
@@ -48,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         overflow: 'hidden',
         paddingBottom: '20px',
+        [theme.breakpoints.down('xs')]: {
+            paddingLeft: '20px',
+            paddingRight: '20px',
+        },
     },
     backgroundTextHeader: {
         fontFamily: "Kaisei Tokumin",
@@ -58,6 +71,9 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
         fontFamily: 'Urbanist',
         fontSize: "16px",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+        },
     },
     problem: {
         backgroundColor: '#FFDAE0',
@@ -66,6 +82,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         overflow: 'hidden',
         paddingBottom: '20px',
+        [theme.breakpoints.down('xs')]: {
+            paddingLeft: '20px',
+            paddingRight: '20px',
+        },
     },
     problemText: {
         maxWidth: '800px',
@@ -73,6 +93,9 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
         fontFamily: 'Urbanist',
         fontSize: "16px",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+        },
     },
     process: {
         backgroundColor: 'white',
@@ -81,6 +104,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         overflow: 'hidden',
         paddingBottom: '20px',
+        [theme.breakpoints.down('xs')]: {
+            paddingLeft: '20px',
+            paddingRight: '20px',
+        },
     },
     processText: {
         maxWidth: '800px',
@@ -88,6 +115,9 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
         fontFamily: 'Urbanist',
         fontSize: "16px",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+        },
     },
     design: {
         backgroundColor: '#FFDAE0',
@@ -96,6 +126,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         overflow: 'hidden',
         paddingBottom: '20px',
+        [theme.breakpoints.down('xs')]: {
+            paddingLeft: '20px',
+            paddingRight: '20px',
+        },
     },
     designText: {
         maxWidth: '800px',
@@ -103,6 +137,9 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
         fontFamily: 'Urbanist',
         fontSize: "16px",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+        },
     },
     impact: {
         backgroundColor: 'white',
@@ -111,6 +148,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         overflow: 'hidden',
         paddingBottom: '20px',
+        [theme.breakpoints.down('xs')]: {
+            paddingLeft: '20px',
+            paddingRight: '20px',
+        },
     },
     impactText: {
         maxWidth: '800px',
@@ -118,6 +159,9 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
         fontFamily: 'Urbanist',
         fontSize: "16px",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+        },
     },
     before_image: {
         display: 'flex',
