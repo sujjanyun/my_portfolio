@@ -14,13 +14,15 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '20px',
         textAlign: "center",
         flexGrow: 1,
-        paddingBottom: '60px',
-        paddingTop: '20px',
         backgroundColor: '#FCF6F1',
         marginLeft: 'auto',
         marginRight: 'auto',
+        overflow: 'hidden',
         color: '#1C2A4E',
         minHeight: '80vh',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '16px',
+        },
     },
     box: {
         width: '84%',
@@ -30,6 +32,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+            paddingLeft: '20px',
+            paddingRight: '20px',
+        },
     },
     sectionDesktop: {
         display: 'none',
