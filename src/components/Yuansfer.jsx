@@ -14,7 +14,6 @@ import useWindowPosition from "../hook/useWindowPosition";
 import Fade from '@mui/material/Fade';
 import { Link as Scroll } from "react-scroll";
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'block',

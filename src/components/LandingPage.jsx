@@ -27,33 +27,55 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '60px',
         width: '70%',
         maxWidth: '600vh',
-        [theme.breakpoints.down('sm')]: {
-            paddingTop: '50px',
+        [theme.breakpoints.between('xs', 'sm')]: {
+            paddingTop: '90px',
+            width: '100%',
+            paddingLeft: '20px',
+            paddingRight: '20px',
         },
     },
     annyeong: {
         fontFamily: "Kaisei Tokumin",
         fontWeight: '400',
         display: 'block',
-        fontSize: '75px',
         color: '#1C2A4E',
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '65px',
+        [theme.breakpoints.between('xs', 'sm')]: {
+            fontSize: '36px',
+        },
+        [theme.breakpoints.between('sm', 'md')]: {
+            fontSize: '66px',
+        },
+        [theme.breakpoints.between('md', 'lg')]: {
+            fontSize: '80px',
         },
     },
     contact: {
         justifyContent: "center",
         alignItems: "center",
+        [theme.breakpoints.up('xs')]: {
+            color: 'grey',
+        },
     },
     aboutMe: {
         fontFamily: 'Urbanist',
         display: 'block',
         position: 'relative',
         fontWeight: '300',
-        fontSize: '22px',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.between('xs', 'sm')]: {
             width: '100%',
-            fontSize: '20px',
+            fontSize: '16px',
+        },
+        [theme.breakpoints.between('sm', 'md')]: {
+            width: '100%',
+            fontSize: '22px',
+        },
+        [theme.breakpoints.between('md', 'lg')]: {
+            width: '100%',
+            fontSize: '24px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '100%',
+            fontSize: '34px',
         },
     },
     arrow: {
@@ -62,7 +84,35 @@ const useStyles = makeStyles((theme) => ({
     goDown: {
         color: "#1C2A4E",
         fontSize: "4rem",
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.between('xs', 'sm')]: {
+            fontSize: "2.5rem",
+        },
+        [theme.breakpoints.between('sm', 'md')]: {
+            fontSize: "4rem",
+        },
+        [theme.breakpoints.between('md', 'lg')]: {
+            fontSize: "6rem",
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: "6rem",
+        },
+    },
+    aboutMeType: {
+        [theme.breakpoints.down('xs')]: {
+            display: 'none',
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '22px',
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '100%',
+            fontSize: '24px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '100%',
+            fontSize: '34px',
+        },
     },
 }));
 
@@ -83,8 +133,8 @@ export default function LandingPage() {
             collapsedHeight={3}
             >
             <h1 className={classes.annyeong}>Annyeong!<br></br>I'm Susan Yun.</h1>
-            <h3 className={classes.aboutMe}>I'm a product designer fascinated by the nature of all things, both human and otherworldly. This excitement and genuine curiosity to understand EVERYTHING motivates me to explore, learn, and create new and thoughtful things every day.
-            <h3 className={classes.aboutMe}>I love {' '}
+            <h3 className={classes.aboutMe}>👋 I'm a <b>Product Designer</b> fascinated by the nature of all things, both human and otherworldly. This excitement and genuine curiosity to understand EVERYTHING motivates me to explore, learn, and create new and thoughtful things every day.
+            <h3 className={classes.aboutMeType}>I love {' '}
             <Typical
                 steps={['books, books about books, and book-shelves 📚', 1000,
                         'making meaningful contributions 💼', 1000,

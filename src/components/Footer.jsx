@@ -29,9 +29,17 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '12px',
         paddingBottom: '24px',
         overflow: 'hidden',
+        [theme.breakpoints.up('xs')]: {
+            fontSize: '12px',
+            paddingBottom: '18px',
+            paddingTop: '0px',
+        },
     },
     contactMe: {
         fontSize: '18px',
+        [theme.breakpoints.up('xs')]: {
+            fontSize: '16px',
+        },
     },
 }));
 
